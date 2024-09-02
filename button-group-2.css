@@ -1,0 +1,31 @@
+.button-group__container {
+    background-color: orange;
+    container: bg-container / inline-size;
+}
+
+.button-group {
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+    /* transition: all 0.3s ease; */
+}
+
+.button-group .button {
+    flex: 1 1 auto;
+}
+
+@container (min-width: 640px) {
+    .button-group {
+        background-color: yellowgreen;
+        justify-content: flex-end;
+    }
+
+    .button-group .button {
+        background-color: yellow;
+        flex: unset;
+    }
+}

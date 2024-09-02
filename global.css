@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 24px;
+    margin: 0;
+}
+
+iframe {
+    /* width: 100%; */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media only screen and (min-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr 320px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .grid--600 {
+        grid-template-columns: 1fr 600px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .grid--75-25 {
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+@supports (container-type: inline-size) {
+    body {
+        background: green;
+    }
+}
+
+@supports not (container-type: inline-size) {
+    body {
+        background: red;
+    }
+}
