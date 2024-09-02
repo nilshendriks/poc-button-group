@@ -1,15 +1,16 @@
 button,
 .button {
-    font-size: 1rem;
-    display: inline-flex;
-    padding: 0.5rem 1rem;
-    border: 1px solid #000;
-    outline: 2px solid #000;
-    outline-offset: 4px;
-    border-radius: 0.25rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #fff;
-    color: #000;
+  font-size: 1rem;
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  outline: 2px solid #000;
+  outline-offset: 4px;
+  border-radius: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease-in-out;
 }

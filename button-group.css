@@ -1,32 +1,29 @@
+.button-group__container {
+  container: bg-container / inline-size;
+}
+
 .button-group {
-    background-color: aliceblue;
-    border: 1px solid #ededed;
-    display: flex;
-    gap: 24px;
+  background-color: whitesmoke;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  /* transition: all 0.3s ease; */
+}
+
+.button-group .button {
+  flex: 1 1 auto;
+}
+
+@container (min-width: 640px) {
+  .button-group {
     justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-}
+  }
 
-.button-group--wrap {
-    flex-wrap: wrap;
-}
-
-.button-group--wrap .button {
-    /* width: 100%; */
-    /* flex: 1 1 auto; */
-}
-
-.button-group--cq {
-    container-type: inline-size;
-}
-
-@container (max-width: 400px) {
-    .button-group--cq .button {
-        background-color: yellow;
-        /* flex: 1 1 auto; */
-        /* flex: 1 1 50%; */
-        flex: 1;
-        white-space: nowrap;
-    }
+  .button-group .button {
+    flex: unset;
+  }
 }
