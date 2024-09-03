@@ -1,3 +1,7 @@
 # Testing CSS container queries.
 
-More later.
+## TODO
+
+[x] better button texts
+[x] add hovers for buttons
+[x] remove unused files

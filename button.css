@@ -5,12 +5,37 @@ button,
   padding: 0.5rem 1rem;
   border: 1px solid #000;
   outline: 2px solid #000;
-  outline-offset: 4px;
+  outline-offset: 2px;
   border-radius: 0.25rem;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: #fff;
   color: #000;
-  transition: all 0.3s ease-in-out;
+  transition:
+    background-color 0.6s ease,
+    color 0.6s ease;
+}
+
+/* fix focus */
+.button:focus-visible {
+  outline-color: mediumblue;
+  outline-width: 4px;
+}
+
+.button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.button--primary {
+  background-color: #000;
+  color: #fff;
+  transition:
+    outline-width 0.6s ease,
+    outline-offset 0.6s ease;
+}
+
+.button--primary:hover {
+  outline-offset: 4px;
 }

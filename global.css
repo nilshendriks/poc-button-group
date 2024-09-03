@@ -18,21 +18,29 @@ body {
   margin: 0;
 }
 
+:focus {
+  outline-color: red;
+}
+
+:focus-visible {
+  outline-offset: 4px;
+  outline-color: blue;
+}
+
 @supports (container-type: inline-size) {
   #main-title {
-    color: green;
     &::after {
-      content: " Yay! Your browser supports container queries!)";
+      content: " - Yay! Your browser supports container queries!";
+      color: green;
     }
   }
 }
 
 @supports not (container-type: inline-size) {
   #main-title {
-    color: red;
-
     &::after {
-      content: "Aww... Your browser doesn't support container queries. :(";
+      content: " - Aww... Your browser doesn't support container queries. :(";
+      color: red;
     }
   }
 }
@@ -41,12 +49,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-}
-
-@media only screen and (min-width: 600px) {
-  .grid {
-    /* grid-template-columns: 1fr 320px; */
-  }
 }
 
 @media only screen and (min-width: 953px) {
