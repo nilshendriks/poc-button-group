@@ -2,67 +2,50 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, viewport-fit=cover"
         />
-        <title>ButtonGroup</title>
-        <link rel="stylesheet" href="global.css" />
-        <link rel="stylesheet" href="button.css" />
-        <link rel="stylesheet" href="button-group.css" />
+        <title>ButtonGroup - Container Query</title>
+        <link rel="stylesheet" href="./global.css" />
+        <link rel="stylesheet" href="./button.css" />
+        <link rel="stylesheet" href="./button-group.css" />
     </head>
     <body>
-        <h1>ButtonGroup</h1>
-        <div class="button-group">
-            <button class="button">button 1</button>
-            <button class="button">button 2</button>
+        <h1 id="main-title">ButtonGroup</h1>
+        <div class="button-group__container">
+            <div class="button-group">
+                <button class="button">button 1</button>
+                <button class="button">button 2</button>
+            </div>
         </div>
         <hr />
-        <h2>Mobile - 320px - media queries</h2>
-        <iframe src="iframe-1.html" frameborder="1"></iframe>
-        <h2>Inside grid - adapting to container width.</h2>
-        <div class="grid">
+        <div class="button-group__container">
+            <div class="button-group">
+                <button class="button">Maak een afspraak</button>
+                <button class="button">Add to cart</button>
+            </div>
+        </div>
+        <h2>Inside grid - other columns widths</h2>
+        <div class="grid grid--columns-75perc-25perc">
             <div class="grid__item">
                 <h3>col 1</h3>
-                <div class="button-group">
-                    <button class="button">cancel</button>
-                    <button class="button">OK</button>
+                <div class="button-group__container">
+                    <div class="button-group">
+                        <button class="button">cancel</button>
+                        <button class="button">OK</button>
+                    </div>
                 </div>
             </div>
             <div class="grid__item">
                 <h3>col 2</h3>
-                <div class="button-group">
-                    <button class="button">Maak een afspraak</button>
-                    <button class="button">Select a sample</button>
+                <div class="button-group__container">
+                    <div class="button-group">
+                        <button class="button">Maak een afspraak</button>
+                        <button class="button">Select a sample</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <hr />
-        <h2>flex-wrap version</h2>
-        <div class="grid">
-            <div class="grid__item">
-                <h3>col 1</h3>
-                <div class="button-group">
-                    <button class="button">cancel</button>
-                    <button class="button">OK</button>
-                </div>
-            </div>
-            <div class="grid__item">
-                <h3>col 2</h3>
-                <div class="button-group button-group--wrap">
-                    <button class="button">Maak een afspraak</button>
-                    <button class="button">Select a sample</button>
-                </div>
-            </div>
-        </div>
-        <h2>Mobile - 320px - wrapped</h2>
-        <iframe src="iframe-2-wrap.html" frameborder="1"></iframe>
-        <hr />
-        <h2>wrapped - not in grid</h2>
-        <div class="button-group button-group--wrap">
-            <button class="button">button 1</button>
-            <button class="button">button 2</button>
         </div>
     </body>
 </html>

@@ -1,57 +1,56 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-    font-size: 1rem;
-    line-height: 1.5;
-    padding: 0 24px;
-    margin: 0;
-}
-
-iframe {
-    /* width: 100%; */
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-}
-
-@media only screen and (min-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr 320px;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .grid--600 {
-        grid-template-columns: 1fr 600px;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .grid--75-25 {
-        grid-template-columns: 3fr 1fr;
-    }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0 24px;
+  margin: 0;
 }
 
 @supports (container-type: inline-size) {
-    body {
-        background: green;
+  #main-title {
+    color: green;
+    &::after {
+      content: " Yay! Your browser supports container queries!)";
     }
+  }
 }
 
 @supports not (container-type: inline-size) {
-    body {
-        background: red;
+  #main-title {
+    color: red;
+
+    &::after {
+      content: "Aww... Your browser doesn't support container queries. :(";
     }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media only screen and (min-width: 600px) {
+  .grid {
+    /* grid-template-columns: 1fr 320px; */
+  }
+}
+
+@media only screen and (min-width: 953px) {
+  .grid--columns-75perc-25perc {
+    grid-template-columns: 3fr 1fr;
+  }
 }

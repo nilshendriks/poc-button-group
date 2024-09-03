@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-recommended",
+  "rules": {
+    "max-nesting-depth": 2,
+    "selector-class-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*((__([a-z][a-z0-9]*)(-[a-z0-9]+)*)?(--([a-z][a-z0-9]*)(-[a-z0-9]+)*)?)$",
+      {
+        "message": "Expected class pattern to be BEM style"
+      }
+    ]
+  }
+}

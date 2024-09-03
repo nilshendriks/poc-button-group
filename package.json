@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "prettier-plugin-astro": "^0.14.1",
+    "stylelint": "^16.9.0",
+    "stylelint-config-recommended": "^14.0.1"
+  }
+}
